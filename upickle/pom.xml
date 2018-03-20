@@ -1,0 +1,40 @@
+<project
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"
+        xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>info.daviot</groupId>
+    <version>0.1-SNAPSHOT</version>
+    <artifactId>demo-json-upickle</artifactId>
+    <packaging>jar</packaging>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <scala.version>2.12.4</scala.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <artifactId>scala-library</artifactId>
+            <groupId>org.scala-lang</groupId>
+            <version>${scala.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.lihaoyi</groupId>
+            <artifactId>upickle_2.12</artifactId>
+            <version>0.5.1</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <sourceDirectory>src/main/scala</sourceDirectory>
+        <testSourceDirectory>src/test/scala</testSourceDirectory>
+        <plugins>
+            <plugin>
+                <groupId>net.alchim31.maven</groupId>
+                <artifactId>scala-maven-plugin</artifactId>
+                <version>3.2.2</version>
+            </plugin>
+        </plugins>
+    </build>
+</project>
